@@ -75,6 +75,10 @@ public class AppTest
 //    Test case 9 Passing numbers with any number of delimiters
         assertEquals(6, Add("//[***]\n1***2***3"));
 
+//    Test case 10   Allow multiple delimiters like this: “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6
+
+        assertEquals(6,Add("//[*][%]\n1*2%3"));
+
     }
 
 
