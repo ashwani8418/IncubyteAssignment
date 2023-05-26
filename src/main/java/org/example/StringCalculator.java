@@ -18,7 +18,7 @@ public class StringCalculator
         System.out.println(Add(number1));
         System.out.println(Add(number2));
 //        System.out.println(Add("-1,2,-3,4,-5"));
-        System.out.println(Add("2+1001"));
+        System.out.println(Add("21001"));
     }
 
     public static int Add(String numbers){
