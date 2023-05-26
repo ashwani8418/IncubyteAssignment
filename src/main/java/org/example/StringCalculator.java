@@ -13,8 +13,8 @@ public class StringCalculator
     }
 
     public static int Add(String numbers){
-        if(numbers.equals("1")){
-            return 1;
+        if(!numbers.isEmpty()){
+            return Integer.parseInt(numbers);
         }
         return 0;
     }
