@@ -50,6 +50,10 @@ public class AppTest
 
 //        Testcase 5 passing String number("1\n2,3") and expected sum value is 6
         assertEquals(6, Add("1\n2,3"));
+        assertEquals(1, Add("1\n,"));
+
+//        Testcase 6 passing String  number(“//;\n1;2”) and expected result is 3
+        assertEquals(3, Add("//;\n1;2"));
     }
 
 }
