@@ -69,6 +69,7 @@ public class AppTest
 
         assertEquals(2,Add("2+1001"));
         assertEquals(168,Add("2+1001+6+160"));
+        assertEquals(168,Add("2+1001+6;\n160"));
 
     }
 
