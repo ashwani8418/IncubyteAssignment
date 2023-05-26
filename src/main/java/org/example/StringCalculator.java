@@ -28,15 +28,16 @@ public class StringCalculator
             if(numbers.startsWith("//")){
                 numbers = numbers.substring(2);
             }
-            if(numbers.contains("\n")){
-                numbers = numbers.replace("\n", ",");
-            }
-            if(numbers.contains(";")){
-                numbers = numbers.replace(";", ",");
-            }
-            if(numbers.contains("+")){
-                numbers = numbers.replace("+", ",");
-            }
+//            if(numbers.contains("\n")){
+//                numbers = numbers.replace("\n", ",");
+//            }
+//            if(numbers.contains(";")){
+//                numbers = numbers.replace(";", ",");
+//            }
+//            if(numbers.contains("+")){
+//                numbers = numbers.replace("+", ",");
+//            }
+            numbers = numbers.replaceAll("[\n;+]", ",");
             String[] num = numbers.split(",");
             List<Integer> negativeNumber = new ArrayList<>();
             int sum = 0;

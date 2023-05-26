@@ -48,13 +48,13 @@ public class AppTest
 //    TestCase 4 passing String number("9099,10900,1,4859") unknown amount of number separated by commas and expected result is 24859
 //        assertEquals(24859, Add("9099,10900,1,4859"));
 
-//        Testcase 5 passing String number("1\n2,3") and expected sum value is 6
+//      Testcase 5 passing String number("1\n2,3") and expected sum value is 6
         assertEquals(6, Add("1\n2,3"));
         assertEquals(1, Add("1\n,"));
         assertEquals(10,Add("1\n2\n3\n4"));
 
-//        Test case 6: Passing numbers ("//;\n1;2") with custom delimiter
-            assertEquals(12, Add("//;\n1;2;\n9"));
+//      Test case 6: Passing numbers ("//;\n1;2") with custom delimiter
+        assertEquals(12, Add("//;\n1;2;\n9"));
 
 
 //         Test case 7: Passing negative numbers and validating exception message
