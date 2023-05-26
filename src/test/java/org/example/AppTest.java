@@ -51,9 +51,20 @@ public class AppTest
 //        Testcase 5 passing String number("1\n2,3") and expected sum value is 6
         assertEquals(6, Add("1\n2,3"));
         assertEquals(1, Add("1\n,"));
+        assertEquals(10,Add("1\n2\n3\n4"));
 
-//        Testcase 6 passing String  number(“//;\n1;2”) and expected result is 3
-        assertEquals(3, Add("//;\n1;2"));
+//        Test case 6: Passing numbers ("//;\n1;2") with custom delimiter
+            assertEquals(12, Add("//;\n1;2;\n9"));
+
+
+//         Test case 7: Passing negative numbers and validating exception message
+        try{
+            Add("-1,2,-3,6,8,-9");
+            fail("Exception should be thrown for negative numbers");
+        }catch (IllegalArgumentException e){
+            assertEquals("negatives not allowed : [-1, -3, -9]", e.getMessage() );
+        }
+
     }
 
 }

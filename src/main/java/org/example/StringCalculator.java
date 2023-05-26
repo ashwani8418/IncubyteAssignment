@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Hello world!
  *
@@ -14,6 +17,7 @@ public class StringCalculator
         System.out.println(Add(numbers));
         System.out.println(Add(number1));
         System.out.println(Add(number2));
+        System.out.println(Add("-1,2,-3,4,-5"));
     }
 
     public static int Add(String numbers){
@@ -30,14 +34,24 @@ public class StringCalculator
                 numbers = numbers.replace(";", ",");
             }
             String[] num = numbers.split(",");
+            List<Integer> negativeNumber = new ArrayList<>();
             int sum = 0;
             for (String s : num) {
                 if(s.isEmpty()){
                     sum += 0;
                 }
                 else{
-                    sum += Integer.parseInt(s);
+                    int val = Integer.parseInt(s);
+                    if(val < 0){
+                        negativeNumber.add(val);
+                    }
+                    else{
+                        sum += val;
+                    }
                 }
+            }
+            if(!negativeNumber.isEmpty()){
+                throw new IllegalArgumentException("negatives not allowed : " + negativeNumber);
             }
             return sum;
         }
