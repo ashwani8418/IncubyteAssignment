@@ -72,6 +72,10 @@ public class AppTest
         assertEquals(168,Add("2+1001+6;\n160"));
         assertEquals(168,Add("//2+1001+6;\n160"));
 
+//    Test case 9 Passing numbers with any number of delimiters
+//        assertEquals(6, Add("//[***]\n1***2***3"));
+
     }
+
 
 }

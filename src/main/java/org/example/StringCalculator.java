@@ -19,6 +19,7 @@ public class StringCalculator
         System.out.println(Add(number2));
 //        System.out.println(Add("-1,2,-3,4,-5"));
         System.out.println(Add("21001"));
+        System.out.println(Add("//[***]\n1***2***3"));
     }
 
     public static int Add(String numbers){
@@ -28,6 +29,7 @@ public class StringCalculator
             if(numbers.startsWith("//")){
                 numbers = numbers.substring(2);
             }
+            System.out.println(numbers);
 //            if(numbers.contains("\n")){
 //                numbers = numbers.replace("\n", ",");
 //            }
@@ -37,7 +39,7 @@ public class StringCalculator
 //            if(numbers.contains("+")){
 //                numbers = numbers.replace("+", ",");
 //            }
-            numbers = numbers.replaceAll("[\n;+]", ",");
+            numbers = numbers.replaceAll("[\n;*+]", ",");
             String[] num = numbers.split(",");
             List<Integer> negativeNumber = new ArrayList<>();
             int sum = 0;
