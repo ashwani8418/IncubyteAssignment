@@ -67,7 +67,8 @@ public class AppTest
 
 //        Test case 8: Passing number greater than 1000
 
-        assertEquals(0,Add("2+1001"));
+        assertEquals(2,Add("2+1001"));
+        assertEquals(168,Add("2+1001+6+160"));
 
     }
 
