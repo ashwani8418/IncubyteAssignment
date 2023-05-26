@@ -8,8 +8,8 @@ public class StringCalculator
 {
     public static void main( String[] args )
     {
-
-        System.out.println( "Hello World!" );
+        String numbers = "";
+        System.out.println(Add(numbers));
     }
 
     public static int Add(String numbers){
