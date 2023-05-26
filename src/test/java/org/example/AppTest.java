@@ -39,10 +39,11 @@ public class AppTest
         assertEquals(0, Add(""));
 
 //        TestCase 2 passing "1" to Add method and expected result is 1;
-        assertEquals(9, Add("9"));
+        assertEquals(1, Add("1"));
 
 //        TestCase 3 passing String number("1,2") separated by commas and expected result is 3
-        assertEquals(3, Add("1,2"));
+        assertEquals(22, Add("0,22"));
+        assertEquals(20000, Add("9099,10900,1"));
     }
 
 }
