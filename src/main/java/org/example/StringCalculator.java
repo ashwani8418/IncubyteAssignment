@@ -17,7 +17,8 @@ public class StringCalculator
         System.out.println(Add(numbers));
         System.out.println(Add(number1));
         System.out.println(Add(number2));
-        System.out.println(Add("-1,2,-3,4,-5"));
+//        System.out.println(Add("-1,2,-3,4,-5"));
+        System.out.println(Add("2+1001"));
     }
 
     public static int Add(String numbers){
@@ -33,6 +34,9 @@ public class StringCalculator
             if(numbers.contains(";")){
                 numbers = numbers.replace(";", ",");
             }
+            if(numbers.contains("+")){
+                numbers = numbers.replace("+", ",");
+            }
             String[] num = numbers.split(",");
             List<Integer> negativeNumber = new ArrayList<>();
             int sum = 0;
@@ -44,8 +48,7 @@ public class StringCalculator
                     int val = Integer.parseInt(s);
                     if(val < 0){
                         negativeNumber.add(val);
-                    }
-                    else{
+                    } else if (val <= 1000) {
                         sum += val;
                     }
                 }

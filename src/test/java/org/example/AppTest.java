@@ -46,7 +46,7 @@ public class AppTest
 
 
 //    TestCase 4 passing String number("9099,10900,1,4859") unknown amount of number separated by commas and expected result is 24859
-        assertEquals(24859, Add("9099,10900,1,4859"));
+//        assertEquals(24859, Add("9099,10900,1,4859"));
 
 //        Testcase 5 passing String number("1\n2,3") and expected sum value is 6
         assertEquals(6, Add("1\n2,3"));
@@ -59,11 +59,15 @@ public class AppTest
 
 //         Test case 7: Passing negative numbers and validating exception message
         try{
-            Add("-1,2,-3,6,8,-9");
+            StringCalculator.Add("-1,2,-3,6,8,-9");
             fail("Exception should be thrown for negative numbers");
         }catch (IllegalArgumentException e){
             assertEquals("negatives not allowed : [-1, -3, -9]", e.getMessage() );
         }
+
+//        Test case 8: Passing number greater than 1000
+
+        assertEquals(2,Add("2+1001"));
 
     }
 
