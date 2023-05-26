@@ -47,6 +47,9 @@ public class AppTest
 
 //    TestCase 4 passing String number("9099,10900,1,4859") unknown amount of number separated by commas and expected result is 24859
         assertEquals(24859, Add("9099,10900,1,4859"));
+
+//        Testcase 5 passing String number("1\n2,3") and expected sum value is 6
+        assertEquals(6, Add("1\n2,3"));
     }
 
 }
