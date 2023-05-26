@@ -67,9 +67,9 @@ public class AppTest
 
 //        Test case 8: Passing number greater than 1000
 
-        assertEquals(2,Add("2+1001"));
-        assertEquals(168,Add("2+1001+6+160"));
-        assertEquals(168,Add("2+1001+6;\n160"));
+        assertEquals(2,Add("2,1001"));
+        assertEquals(168,Add("2,1001,6,160"));
+        assertEquals(168,Add("2,1001,6;\n160"));
 //        assertEquals(168,Add("//2+1001+6;\n160"));
 
 //    Test case 9 Passing numbers with any number of delimiters
@@ -77,7 +77,7 @@ public class AppTest
 
 //    Test case 10   Allow multiple delimiters like this: “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6
 
-        assertEquals(6,Add("//[*][%]\n1*2%3"));
+        assertEquals(6,Add("//[*][%]\n1*2%%%+3"));
 
     }
 

@@ -26,6 +26,9 @@ public class StringCalculator
         if(numbers.length() == 1){
             return Integer.parseInt(numbers);
         } else if (numbers.length() > 1) {
+            if(numbers.contains(";")){
+                numbers = numbers.replace(";", ",");
+            }
             String delimiter = ",";
             String numbersOnly = numbers;
             if(numbers.startsWith("//")){
@@ -34,8 +37,8 @@ public class StringCalculator
                 System.out.println(delimiter);
                 numbersOnly = numbers.substring(delimiterEndIndex + 1);
             }
-            numbersOnly = numbersOnly.replaceAll("[\n;+]", delimiter);
-            String[] num = numbersOnly.split(delimiter);
+//            numbersOnly = numbersOnly.replaceAll(");
+            String[] num = numbersOnly.split("[\n" + delimiter + "]");
             List<Integer> negativeNumber = new ArrayList<>();
             int sum = 0;
             for (String s : num) {
