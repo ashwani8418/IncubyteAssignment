@@ -29,7 +29,6 @@ public class StringCalculator
             if(numbers.startsWith("//")){
                 numbers = numbers.substring(2);
             }
-            System.out.println(numbers);
 //            if(numbers.contains("\n")){
 //                numbers = numbers.replace("\n", ",");
 //            }
