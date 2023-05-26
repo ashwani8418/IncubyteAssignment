@@ -42,7 +42,7 @@ public class AppTest
         assertEquals(1, Add("1"));
 
 //        TestCase 3 passing String number("1,2") separated by commas and expected result is 3
-        assertEquals(22, Add("0,22"));
+        assertEquals(3, Add("1,2"));
 
 
 //        TestCase 4 passing String number("9099,10900,1,4859") unknown amount of number separated by commas and expected result is 24859
