@@ -4,6 +4,8 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import static org.example.StringCalculator.Add;
+
 /**
  * Unit test for simple App.
  */
@@ -33,6 +35,8 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+//        TestCase 1 passing empty string to Add method and expected result is 0;
+        assertEquals(0, Add(""));
     }
+
 }
