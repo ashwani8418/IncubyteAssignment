@@ -37,6 +37,9 @@ public class AppTest
     {
 //        TestCase 1 passing empty string to Add method and expected result is 0;
         assertEquals(0, Add(""));
+
+//        TestCAse 2 passing "1" to Add method and expected result is 1;
+        assertEquals(1, Add("1"));
     }
 
 }
