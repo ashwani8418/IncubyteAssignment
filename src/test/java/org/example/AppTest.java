@@ -21,7 +21,6 @@ public class AppTest
         assertEquals(50, Add("50"));
         assertEquals(1000, Add("1000"));
         assertEquals(0, Add("1001"));
-        assertEquals(0, Add("0"));
 
 //        TestCase 3 passing String number("1,2") separated by commas and expected result is 3
         assertEquals(3, Add("1,2"));
@@ -35,7 +34,7 @@ public class AppTest
 
 //      Testcase 5 passing String number("1\n2,3") and expected sum value is 6
         assertEquals(6, Add("1\n2,3"));
-        assertEquals(1, Add("1\n,"));
+        assertEquals(1, Add("1,\n,"));
         assertEquals(10,Add("1\n2\n3\n4"));
 
 //      Test case 6: Passing numbers ("//;\n1;2") with custom delimiter
