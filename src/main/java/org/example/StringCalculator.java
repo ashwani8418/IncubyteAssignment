@@ -3,14 +3,13 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Hello world!
- *
- */
 public class StringCalculator
 {
     public static int Add(String numbers){
         if(numbers.length() == 1){
+            if(numbers.contains (";") || numbers.contains ("\n") || numbers.contains (",") || numbers.contains ("*")){
+                return 0;
+            }
             return Integer.parseInt(numbers);
         } else if (numbers.length() > 1) {
             if (numbers.contains (";")) {
