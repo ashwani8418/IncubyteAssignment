@@ -9,35 +9,20 @@ import java.util.List;
  */
 public class StringCalculator
 {
-    public static void main( String[] args )
-    {
-        String numbers = "";
-        String number1 = "1\n2,15";
-        String number2 = "//;\n1;2";
-        System.out.println(Add(numbers));
-        System.out.println(Add(number1));
-        System.out.println(Add(number2));
-//        System.out.println(Add("-1,2,-3,4,-5"));
-        System.out.println(Add("21001"));
-        System.out.println(Add("//[****]\n1*****2***3"));
-    }
-
     public static int Add(String numbers){
         if(numbers.length() == 1){
             return Integer.parseInt(numbers);
         } else if (numbers.length() > 1) {
-            if(numbers.contains(";")){
-                numbers = numbers.replace(";", ",");
+            if (numbers.contains (";")) {
+                numbers = numbers.replace (";" , ",");
             }
             String delimiter = ",";
             String numbersOnly = numbers;
-            if(numbers.startsWith("//")){
-                int delimiterEndIndex = numbers.indexOf('\n');
-                delimiter = numbers.substring(2, delimiterEndIndex);
-                System.out.println(delimiter);
-                numbersOnly = numbers.substring(delimiterEndIndex + 1);
+            if (numbers.startsWith ("//")) {
+                int delimiterEndIndex = numbers.indexOf ('\n');
+                delimiter = numbers.substring (2 , delimiterEndIndex);
+                numbersOnly = numbers.substring (delimiterEndIndex + 1);
             }
-//            numbersOnly = numbersOnly.replaceAll(");
             String[] num = numbersOnly.split("[\n" + delimiter + "]");
             List<Integer> negativeNumber = new ArrayList<>();
             int sum = 0;
