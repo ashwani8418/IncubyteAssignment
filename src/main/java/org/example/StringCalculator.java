@@ -17,13 +17,13 @@ public class StringCalculator
                 numbers = numbers.replace (";" , ",");
             }
             String delimiter = ",";
-            String numbersOnly = numbers;
+
             if (numbers.startsWith ("//")) {
                 int delimiterEndIndex = numbers.indexOf ('\n');
                 delimiter = numbers.substring (2 , delimiterEndIndex);
-                numbersOnly = numbers.substring (delimiterEndIndex + 1);
+                numbers = numbers.substring (delimiterEndIndex + 1);
             }
-            String[] num = numbersOnly.split("[\n" + delimiter + "]");
+            String[] num = numbers.split("[\n" + delimiter + "]");
             List<Integer> negativeNumber = new ArrayList<>();
             int sum = 0;
             for (String s : num) {

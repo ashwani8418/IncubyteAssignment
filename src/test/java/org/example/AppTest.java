@@ -18,6 +18,9 @@ public class AppTest
 
 //        TestCase 2 passing "1" to Add method and expected result is 1;
         assertEquals(1, Add("1"));
+        assertEquals(50, Add("50"));
+        assertEquals(1000, Add("1000"));
+        assertEquals(0, Add("1001"));
 
 //        TestCase 3 passing String number("1,2") separated by commas and expected result is 3
         assertEquals(3, Add("1,2"));
