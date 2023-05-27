@@ -24,6 +24,9 @@ public class AppTest
 
 //        TestCase 3 passing String number("1,2") separated by commas and expected result is 3
         assertEquals(3, Add("1,2"));
+        assertEquals(313, Add("1,2,150,1500,160"));
+        assertEquals(150, Add("10000,20000,150,1500,1600"));
+        assertEquals(0, Add("10000,20000,1500,1500,1600,15064,465111566,4565645"));
 
 
 //    TestCase 4 passing String number("9099,10900,1,4859") unknown amount of number separated by commas and expected result is 24859
