@@ -21,4 +21,10 @@ public class AppTest {
     public void emptyReturnZero(){
         assertEquals (strCalc.add(""), 0);
     }
+
+    @Test
+    public void singleReturnValue(){
+        assertEquals (strCalc.add("1"), 1);
+    }
+
 }
