@@ -1,9 +1,8 @@
 # TDD Kata 1 - String Calculator
-Before you start: 
-■ Try not to read ahead . 
-■ Do one task at a time. The trick is to learn to work incrementally. 
-■ Make sure you only test for correct inputs. there is no need to test for invalid inputs for this kata. 
-■ Test First!
+## Before you start: 
+  ■ Do one task at a time. The trick is to learn to work incrementally. 
+  ■ Make sure you only test for correct inputs. there is no need to test for invalid inputs for this kata. 
+  ■ Test First!
 
 ## String Calculator 
 ### 1. In a test-first manner, create a simple class  
