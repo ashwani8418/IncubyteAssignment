@@ -5,7 +5,7 @@ import java.util.List;
 
 public class StringCalculator
 {
-    public static int Add(String numbers){
+    public static int add(String numbers){
         if(numbers.length() == 1){
             return Integer.parseInt(numbers);
         } else if (numbers.length() > 1) {
