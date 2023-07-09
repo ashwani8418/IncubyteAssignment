@@ -32,4 +32,9 @@ public class AppTest {
         assertEquals (strCalc.add("1,2"), 3);
     }
 
+    @Test
+    public void nCommaSeparatedReturnSums(){
+        assertEquals (strCalc.add("1,2,3,4,5"), 15);
+    }
+
 }
