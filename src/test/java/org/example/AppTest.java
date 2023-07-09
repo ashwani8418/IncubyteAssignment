@@ -79,4 +79,9 @@ public class AppTest {
             throw e;
         }
     }
+
+    @Test
+    public void ignoreGreaterThanThousand() throws Exception{
+        assertEquals (strCalc.add ("2,1002,5,7"), 14);
+    }
 }
