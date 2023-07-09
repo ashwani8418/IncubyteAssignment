@@ -18,43 +18,54 @@ public class AppTest {
 
     @Test
 
-    public void emptyReturnZero(){
+    public void emptyReturnZero () throws Exception{
         assertEquals (strCalc.add(""), 0);
     }
 
     @Test
-    public void singleReturnValue(){
+    public void singleReturnValue() throws Exception{
         assertEquals (strCalc.add("1"), 1);
     }
 
     @Test
-    public void twoCommaSeparatedReturnSums(){
+    public void twoCommaSeparatedReturnSums() throws Exception{
         assertEquals (strCalc.add("1,2"), 3);
     }
 
     @Test
-    public void nCommaSeparatedReturnSums(){
+    public void nCommaSeparatedReturnSums() throws Exception{
         assertEquals (strCalc.add("1,2,3,4,5"), 15);
     }
 
     @Test
-    public void twoLineSeparatedReturnSum(){
+    public void twoLineSeparatedReturnSum() throws Exception{
         assertEquals (strCalc.add("1\n2"), 3);
     }
 
     @Test
-    public void nLineSeparatedReturnSum(){
+    public void nLineSeparatedReturnSum() throws Exception{
         assertEquals (strCalc.add("1\n,2,3\n4,5"), 15);
     }
 
     @Test
 
-    public void twoAnyDelimeterSeparatedReturnSum(){
+    public void twoAnyDelimeterSeparatedReturnSum() throws Exception{
         assertEquals (strCalc.add ("//;\\n1;2"), 3);
     }
 
     @Test
-    public void nAnyDelimiterSeparatedReturnSum(){
+    public void nAnyDelimiterSeparatedReturnSum() throws Exception{
         assertEquals (strCalc.add("//;\\n1XY;2_+3(4)$5"),15);
+    }
+
+    @Test(expectedExceptions = Exception.class, expectedExceptionsMessageRegExp = "^Negatives not allowed: -1.*")
+    public void singleNegativeThrowsException() throws Exception{
+        try{
+            strCalc.add ("-1");
+        }
+        catch (Exception e){
+            System.out.println (e.getMessage ());
+            throw e;
+        }
     }
 }
