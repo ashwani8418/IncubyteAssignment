@@ -68,4 +68,15 @@ public class AppTest {
             throw e;
         }
     }
+
+    @Test(expectedExceptions = Exception.class, expectedExceptionsMessageRegExp = "^Negatives not allowed: -1 -10 -11 -12.*")
+    public void  nNegativesThrowsException() throws Exception{
+        try {
+            strCalc.add("-1,5,-10,-11,-12,9,20");
+        }
+        catch (Exception e){
+            System.out.println (e.getMessage ());
+            throw e;
+        }
+    }
 }
