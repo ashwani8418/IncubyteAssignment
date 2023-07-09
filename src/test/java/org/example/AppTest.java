@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 /**
  * Unit test for simple App.
  */
+@SuppressWarnings("ALL")
 public class AppTest {
     private StringCalculator strCalc;
 
