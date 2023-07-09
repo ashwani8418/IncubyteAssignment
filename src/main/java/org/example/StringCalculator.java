@@ -15,8 +15,9 @@ public class StringCalculator
                 integerNum = Integer.parseInt (num);
                 if(integerNum < 0){
                     throw new Exception ("Negatives not allowed: " + getNegative(nums));
-                }
-                else{
+                } else if (integerNum > 1000) {
+                    continue;
+                } else{
                     sum += integerNum;
                 }
             }
