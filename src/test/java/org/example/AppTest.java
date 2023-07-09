@@ -42,4 +42,9 @@ public class AppTest {
         assertEquals (strCalc.add("1\n2"), 3);
     }
 
+    @Test
+    public void nLineSeparatedReturnSum(){
+        assertEquals (strCalc.add("1\n,2,3\n4,5"), 15);
+    }
+
 }
