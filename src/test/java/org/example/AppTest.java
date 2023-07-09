@@ -44,7 +44,7 @@ public class AppTest {
 
     @Test
     public void nLineSeparatedReturnSum() throws Exception{
-        assertEquals (strCalc.add("1\n,2,3\n4,5"), 15);
+        assertEquals (strCalc.add("1\n,2,3\n4,6"), 16);
     }
 
     @Test
