@@ -47,4 +47,9 @@ public class AppTest {
         assertEquals (strCalc.add("1\n,2,3\n4,5"), 15);
     }
 
+    @Test
+
+    public void twoAnyDelimeterSeparatedReturnSum(){
+        assertEquals (strCalc.add ("//;\\n1;2"), 3);
+    }
 }

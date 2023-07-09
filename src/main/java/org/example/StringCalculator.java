@@ -5,21 +5,13 @@ import java.util.List;
 
 public class StringCalculator
 {
+    private static final String delimeter = "[^0-9-]";
     public static int add(String numbers){
         if(numbers.length() == 1){
             return Integer.parseInt(numbers);
         } else if (numbers.length() > 1) {
-            if (numbers.contains (";")) {
-                numbers = numbers.replace (";" , ",");
-            }
-            String delimiter = ",";
 
-            if (numbers.startsWith ("//")) {
-                int delimiterEndIndex = numbers.indexOf ('\n');
-                delimiter = numbers.substring (2 , delimiterEndIndex);
-                numbers = numbers.substring (delimiterEndIndex + 1);
-            }
-            String[] num = numbers.split("[\n" + delimiter + "]");
+            String[] num = numbers.split(delimeter);
             List<Integer> negativeNumber = new ArrayList<>();
             int sum = 0;
             for (String s : num) {
