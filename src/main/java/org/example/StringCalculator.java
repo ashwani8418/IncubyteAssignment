@@ -1,15 +1,11 @@
 package org.example;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class StringCalculator
 {
     private static final String delimiter = "[^0-9-]";
     public static int add(String numbers) throws  Exception{
         String[] nums = numbers.split(delimiter);
         int sum = 0;
-        int integerNum = 0;
+        int integerNum;
         for(String num : nums){
             try{
                 integerNum = Integer.parseInt (num);

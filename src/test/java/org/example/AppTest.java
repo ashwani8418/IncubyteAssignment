@@ -84,4 +84,9 @@ public class AppTest {
     public void ignoreGreaterThanThousand() throws Exception{
         assertEquals (strCalc.add ("2,1002,5,7"), 14);
     }
+
+    @Test
+    public void anyLengthDelimiters() throws Exception{
+        assertEquals (strCalc.add("//[****]\\n1***2***3**9"), 15);
+    }
 }
