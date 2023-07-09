@@ -27,4 +27,9 @@ public class AppTest {
         assertEquals (strCalc.add("1"), 1);
     }
 
+    @Test
+    public void twoCommaSeparatedReturnSums(){
+        assertEquals (strCalc.add("1,2"), 3);
+    }
+
 }
