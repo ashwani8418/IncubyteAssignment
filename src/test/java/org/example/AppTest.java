@@ -37,4 +37,9 @@ public class AppTest {
         assertEquals (strCalc.add("1,2,3,4,5"), 15);
     }
 
+    @Test
+    public void twoLineSeparatedReturnSum(){
+        assertEquals (strCalc.add("1\n2"), 3);
+    }
+
 }
