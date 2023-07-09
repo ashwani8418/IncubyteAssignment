@@ -89,4 +89,9 @@ public class AppTest {
     public void anyLengthDelimiters() throws Exception{
         assertEquals (strCalc.add("//[****]\\n1***2***3**9"), 15);
     }
+
+    @Test
+    public void multipleDelimiters() throws Exception{
+        assertEquals (strCalc.add("//[*][%]//;\\n1*9#3&5"),18);
+    }
 }
